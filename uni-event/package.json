@@ -1,0 +1,27 @@
+{
+  "name": "uni-event",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently --names WEB,UW,CITY,SEARCH,CHECK,RATING,PHYSICAL,SPECIAL \"vite\" \"py ../extraction.py --env-file ../.env.extractor\" \"py ../extraction_external.py --env-file ../.env.extractor\" \"py ../search.py\" \"py ../Check_Event.py\" \"py ../Rating.py\" \"py ../Physical_Event.py\" \"py ../special.py\"",
+    "dev:web": "vite",
+    "dev:uw": "py ../extraction.py --env-file ../.env.extractor",
+    "dev:city": "py ../extraction_external.py --env-file ../.env.extractor",
+    "dev:search": "py ../search.py",
+    "dev:check": "py ../Check_Event.py",
+    "dev:special": "py ../special.py",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^10.0.5",
+    "vite": "^5.1.0"
+  }
+}
