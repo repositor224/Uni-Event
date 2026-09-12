@@ -1,0 +1,50 @@
+{
+  "builds": [
+    {
+      "src": "Check_Event.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "Physical_Event.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "Rating.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "search.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/check_events",
+      "destination": "/Check_Event.py"
+    },
+    {
+      "source": "/physical_events",
+      "destination": "/Physical_Event.py"
+    },
+    {
+      "source": "/organizers(.*)",
+      "destination": "/Rating.py"
+    },
+    {
+      "source": "/events/link",
+      "destination": "/Rating.py"
+    },
+    {
+      "source": "/health",
+      "destination": "/search.py"
+    },
+    {
+      "source": "/categories",
+      "destination": "/search.py"
+    },
+    {
+      "source": "/events",
+      "destination": "/search.py"
+    }
+  ]
+}
