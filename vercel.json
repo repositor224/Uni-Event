@@ -1,9 +1,9 @@
 {
   "builds": [
     {
-      "src": "uni-event/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": { "distDir": "uni-event/dist" }
     },
     {
       "src": "Check_Event.py",

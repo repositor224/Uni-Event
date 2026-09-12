@@ -1,0 +1,7 @@
+{
+  "name": "uni-event-root",
+  "private": true,
+  "scripts": {
+    "build": "cd uni-event && npm install && npm run build"
+  }
+}
