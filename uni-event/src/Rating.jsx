@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
 
-const RATING_API = import.meta.env.VITE_RATING_API_URL || 'http://127.0.0.1:8002';
-const SEARCH_API = import.meta.env.VITE_SEARCH_API_URL || 'http://127.0.0.1:8000';
+const RATING_API = import.meta.env.VITE_RATING_API_URL || (import.meta.env.PROD ? '' : 'http://127.0.0.1:8002');
+const SEARCH_API = import.meta.env.VITE_SEARCH_API_URL || (import.meta.env.PROD ? '' : 'http://127.0.0.1:8000');
 
 const Rating = ({ session }) => {
   const [organizers, setOrganizers] = useState([]);

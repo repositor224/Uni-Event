@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 
-const CHECK_API = import.meta.env.VITE_CHECK_API_URL || 'http://127.0.0.1:8001';
+const CHECK_API = import.meta.env.VITE_CHECK_API_URL || (import.meta.env.PROD ? '' : 'http://127.0.0.1:8001');
 
 const CheckEvent = () => {
   const [formData, setFormData] = useState({

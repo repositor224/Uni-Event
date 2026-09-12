@@ -5,8 +5,8 @@ import CheckEvent from './Check_Event';
 import Rating from './Rating';
 import PhysicalEvent from './Physical_Event';
 import About from './about';
-const SEARCH_API = import.meta.env.VITE_SEARCH_API_URL || 'http://127.0.0.1:8000';
-const RATING_API = import.meta.env.VITE_RATING_API_URL || 'http://127.0.0.1:8002';
+const SEARCH_API = import.meta.env.VITE_SEARCH_API_URL || (import.meta.env.PROD ? '' : 'http://127.0.0.1:8000');
+const RATING_API = import.meta.env.VITE_RATING_API_URL || (import.meta.env.PROD ? '' : 'http://127.0.0.1:8002');
 const CATEGORIES = [
   'All', 'Key Deadlines', 'Design Teams', 'Competitions', 'Residence Events',
   'Academic Events', 'Clubs', 'Career & Job Fairs', 'Recreation', 'Sports',

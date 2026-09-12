@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { supabase } from './supabaseClient';
 import './index.css';
 
-const PHYSICAL_API = import.meta.env.VITE_PHYSICAL_API_URL || 'http://127.0.0.1:8003';
-const RATING_API = import.meta.env.VITE_RATING_API_URL || 'http://127.0.0.1:8002';
+const PHYSICAL_API = import.meta.env.VITE_PHYSICAL_API_URL || (import.meta.env.PROD ? '' : 'http://127.0.0.1:8003');
+const RATING_API = import.meta.env.VITE_RATING_API_URL || (import.meta.env.PROD ? '' : 'http://127.0.0.1:8002');
 
 const CATEGORIES = [
   'Key Deadlines', 'Design Teams', 'Competitions', 'Residence Events',
