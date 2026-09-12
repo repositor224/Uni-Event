@@ -1,6 +1,11 @@
 {
   "builds": [
     {
+      "src": "uni-event/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
       "src": "Check_Event.py",
       "use": "@vercel/python"
     },
@@ -45,6 +50,10 @@
     {
       "source": "/events",
       "destination": "/search.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/uni-event/$1"
     }
   ]
 }
